@@ -1,0 +1,71 @@
+
+$effixis-scampi: #66589F;
+$effixis-steel-blue: #3F7DBE;
+$effixis-astronaut: #243565;
+$effixis-black: #050606;
+
+$font-family-sans-serif: Inter, Roboto, sans-serif;
+
+$theme-colors: (
+    "primary": $effixis-scampi
+);
+
+.bg-steel-blue {
+    background-color: $effixis-steel-blue;
+}
+
+.bg-scampi {
+    background-color: $effixis-scampi;
+}
+
+.bg-astronaut {
+    background-color: $effixis-astronaut;
+}
+
+.bg-black {
+    background-color: $effixis-black;
+}
+
+#catchline {
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+#header-hr {
+    border: 1px solid $effixis-scampi;
+    width: 42px;
+}
+
+#header-container {
+    max-width: 1800px;
+}
+
+#mission {
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+.rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#mission-learn-more {
+    text-decoration: none;
+    outline: 0;
+}
+
+#mission-hr {
+    border: 1px solid $effixis-steel-blue;
+    width: 42px;
+}
+
+#product {
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
