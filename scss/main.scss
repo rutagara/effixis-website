@@ -1,0 +1,95 @@
+@import 'effixis';
+
+.design-line {
+    height: 8px;
+    width: 60px;
+    background: linear-gradient(90deg, $effixis-scampi 0%, $effixis-steel-blue 100%);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-effixis {
+    color: $white;
+    background: linear-gradient(90deg, $effixis-scampi 0%, $effixis-steel-blue 100%);
+    background-repeat: repeat-x;
+}
+
+.large-container {
+    max-width: min(80%, 1800px);
+}
+
+#header {
+    overflow: hidden;
+    background: linear-gradient(90deg, $effixis-scampi -20%, $effixis-astronaut 100%);
+
+
+    #header-container {
+        position: relative;
+    }
+
+    #catchline {
+        padding-top: 180px;
+        padding-bottom: 160px;
+    }
+    
+    #header-big-logo {
+        img {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            position: absolute;
+            right: 0;
+            height: 600px;
+            bottom: -200px;
+        }
+    }
+
+    .custom-shape-divider {
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg); 
+
+        svg {
+            width: calc(100% + 1.3px);
+            height: 120px;
+            transform: rotateY(180deg); 
+
+            .shape-fill {
+                fill: $light;
+            }
+        }
+    }
+}
+
+#mission {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+#product {
+    padding-top: 80px;
+    padding-bottom: 80px; 
+}
+
+#software-dev {
+    padding-top: 80px;
+    padding-bottom: 80px; 
+}
+
+#partners {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    #azenes, #volada {
+        height: 100px;
+    }
+}
+
+#footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}

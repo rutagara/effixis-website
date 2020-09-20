@@ -4,19 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 
     <script src="https://kit.fontawesome.com/7e5ac0a504.js" crossorigin="anonymous"></script>
 
     <title>Effixis | Simple solutions to complex problems</title>
   </head>
   <body>
-    <section id="header" class="bg-astronaut">
-        <div id="header-container" class="container-fluid">
-          <nav class="navbar main-navbar top navbar-expand-lg p-5 navbar-dark">
+    <section id="header">
+        <div id="header-container" class="container-fluid large-container">
+
+          <!--Navbar-->
+          <nav class="navbar main-navbar top navbar-expand-xl p-5 navbar-dark">
     
             <a class="navbar-brand main-navbar-brand" href="index.html">
-              <img id="logo" src="images/brand/logo_white_text.svg" height="40" alt="logo"></img>
+              <img id="logo" src="images/brand/logo_white_text.svg" height="40" alt="logo">
             </a>
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,58 +29,64 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link font-weight-bold p-3" href="index.html">Home</a>
+                  <a class="nav-link p-3" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link font-weight-bold p-3" href="sst-product.html">New SST Product</a>
+                  <a class="nav-link p-3" href="sst-product.html">New SST Product</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link font-weight-bold p-3" href="software-dev.html">Software Development</a>
+                  <a class="nav-link p-3" href="software-dev.html">Software Development</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link font-weight-bold p-3" href="sst-on-demand.html">SST On-Demand</a>
+                  <a class="nav-link p-3" href="sst-on-demand.html">SST On-Demand</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link font-weight-bold p-3" href="about-us.html">About Us</a>
+                  <a class="nav-link p-3" href="about-us.html">About Us</a>
                 </li>
               </ul>
             </div>
-        
           </nav>
-          
+
+          <!--Header-->
           <div class="row">
             <div id="catchline" class="col-lg-6 col-12 px-5 text-light">
               <h1 class="display-4">Simple solutions to complex problems</h1> 
-              <div class="py-3">
-                <hr id="header-hr" align="left">
-              </div>
+              <span class="design-line"></span>
             </div>
-            <div class="col-lg-6 col-12 d-flex justify-content-center align-items-end" style="overflow: hidden;">
-              <img src="images/brand/1000x1000-logo-icon.png" height="600" class="rotate-90" style="margin-bottom: -180px";></img>
-            </div>
+            
           </div>
-          
+
+          <div id="header-big-logo" class="d-lg-block d-none">
+            <img src="images/brand/1000x1000-logo-icon.png">
+          </div>
+
+        </div>
+      
+        <div class="custom-shape-divider">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+          </svg>
         </div>
     </section>
 
+    
     <section id="mission" class="bg-light">
       <div class="container">
         <div class="row text-dark">
-          <div class="col-lg-8 col-12 p-5">
-            <h2 class="pb-3">We deliver next generation products for financial institutions and service providers</h2>
-
-            <button class="btn btn-primary">
+          
+          <div class="col-lg-6 col-12 p-5">
+            <h1 class="pb-3">About the company</h1>
+            <p class="pb-3">Effixis is a swiss company delivering next generation products for financial institutions and service providers</p>
+            <a class="btn btn-primary" href="about-us.html">
               Learn more about us
-            </button>
-
+            </a>
           </div>
 
-          <div class="col-lg-4 col-12 p-5 d-flex justify-content-center">
-            <img src="images/illustrations/undraw_code_inspection_scampi.svg" class="img-fluid" width="300px"></img>
+          <div class="col-lg-6 col-12 switzerland-img-container">
+            <img src="images/illustrations/switzerland.svg" class="img-fluid img-switzerland">
           </div>
           
         </div>
-        
       </div>
     </section>
 
@@ -85,23 +94,115 @@
     <section id="product" class="bg-white">
       <div class="container">
         <div class="row text-dark">
+
           <div class="col-lg-8 p-5">
-            <img class="img-fluid" src="https://via.placeholder.com/600x400.png"></img>
+            <img class="img-fluid" src="images/illustrations/macbook-with-product.png">
           </div>
+
           <div class="col-lg-4 p-5">
-            <h4 class="pb-3"><span class="font-weight-bold">Product &trade;</span> makes SST market & Credit Risk assessment easy.</h4>
-            <p>Contact us for a 15 minutes demonstration on tablet during your coffee break.</p>
-            <button class="btn btn-primary">
+            <h4 class="pb-3"><span class="font-weight-bold">Formis &trade;</span> makes SST reporting simpler than ever</h4>
+            <p class="pb-3">Contact us for a 15 minutes demonstration on tablet during your coffee break.</p>
+            <a class="btn btn-secondary" href="contact.html">
               Book a Demo
-            </button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="software-dev" class="bg-light">
+      <div class="container">
+        <div class="row text-dark">
+
+          <div class="col-lg-7 p-5">
+            <h1 class="pb-3">Software development</h1>
+            <p class="pb-3">Do you have a software development project in mind?
+            <br>Contact us to establish an attractive partnership.</p>
+            <a class="btn btn-primary" href="contact.html">
+              Contact us
+            </a>
+          </div>
+
+          <div class="col-lg-5 p-5 software-dev-icon-with-gear">
+            <img class="img-fluid" src="images/brand/logo_icon_with_gear.svg">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="bg-white">
+      <div class="container">
+        <div class="row text-dark">
+
+          <div class="col-lg-6 p-5 d-flex align-items-center">
+            <h1>Meet our partners</h1>
+          </div>
+          <div class="col-lg-3 p-5 d-flex align-items-center justify-content-center">
+            <img id="azenes" class="img-fluid" src="images/partners/azenes.svg">
+          </div>
+          <div class="col-lg-3 p-5 d-flex align-items-center justify-content-center">
+            <img id="volada" class="img-fluid" src="images/partners/volada.svg">
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" class="bg-light">
+      <div class="container-fluid large-container">
+        <div class="row">
+          <div class="col-5 p-5">
+
+            <img id="logo" src="images/brand/logo.svg" class="mb-5" height="40" alt="logo">
+
+            <p>Subscribe to our newsletter</p>
+            <form class="form-inline mb-5">
+              <label class="sr-only" for="inlineFormInputName2">Email</label>
+              <input type="email" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Email">
+            
+              <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+            </form>
+
+            <p class="text-muted">&copy; Copyright 2020, Effixis SA</p>
+            
+          </div>
+          <div class="col-3 p-5">
+            <h4 class="mb-4">Effixis SA</h4>
+            <nav>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link mb-2" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mb-2" href="sst-product.html">New SST Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mb-2" href="software-dev.html">Software Development</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mb-2" href="sst-on-demand.html">SST On-Demand</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mb-2" href="about-us.html">About Us</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+          <div class="col-4 p-5">
+            <h4 class="mb-4">Contact us</h4>
+            <p>Route cantonale 105,
+              1025 St-Sulpice, VD</p>
+            <p>contact@effixis.ch</p>
+
+            <p>Follow us on linkedin</p>
           </div>
         </div>
-        
       </div>
     </section>
     
-
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
