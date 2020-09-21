@@ -1,19 +1,25 @@
 {
-  "name": "effixis",
-  "version": "1.0.0",
-  "description": "Effixis website",
-  "main": "index.js",
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "watch 'npm run build-css' scss",
-    "build-css": "sass scss/main.scss docs/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "Maxime Rutagarama",
-  "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.5.2"
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "bootstrap": "^4.5.2",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "watch": "^1.0.2"
+    "file-loader": "^6.1.0",
+    "sass": "^1.26.11"
   }
 }

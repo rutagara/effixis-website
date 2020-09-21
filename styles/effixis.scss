@@ -1,0 +1,36 @@
+
+$effixis-scampi: #66589F;
+$effixis-steel-blue: #3F7DBE;
+$effixis-astronaut: #243565;
+$effixis-black: #050606;
+$effixis-light: #EEF0F3;
+
+$font-family-sans-serif: Inter, sans-serif;
+
+$theme-colors: (
+    "primary": $effixis-scampi,
+    "secondary": $effixis-steel-blue,
+    "light": $effixis-light
+);
+
+.bg-steel-blue {
+    background-color: $effixis-steel-blue;
+}
+
+.bg-scampi {
+    background-color: $effixis-scampi;
+}
+
+.bg-astronaut {
+    background-color: $effixis-astronaut;
+}
+
+.bg-black {
+    background-color: $effixis-black;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, $effixis-scampi -20%, $effixis-astronaut 100%);
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
