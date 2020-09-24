@@ -1,21 +1,22 @@
-import Head from 'next/head'
 import Header from '../components/header'
-import Footer from '../components/footer'
+import StandardLayout from '../components/standard-layout'
 import { Row, Col, Container } from 'react-bootstrap'
 
-const HomeHeader = () => <Header>
-  <Row>
-    <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
-      <h1 className="display-4">Simple solutions to complex problems</h1>
-      <span className="design-line"></span>
-    </Col>
+const HomeHeader = () => (
+  <Header>
+    <Row>
+      <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
+        <h1 className="display-4">Simple solutions to complex problems</h1>
+        <span className="design-line"></span>
+      </Col>
 
-  </Row>
+    </Row>
 
-  <div id="header-big-logo" className="d-lg-block d-none">
-    <img src="/images/brand/1000x1000-logo-icon.png"></img>
-  </div>
-</Header>
+    <div id="header-big-logo" className="d-lg-block d-none">
+      <img src="/images/brand/1000x1000-logo-icon.png"></img>
+    </div>
+  </Header>
+)
 
 const Mission = () => (
   <section id="mission" className="bg-light">
@@ -25,7 +26,7 @@ const Mission = () => (
         <Col lg={6} xs={12} className="p-5">
           <h1 className="pb-3">About the company</h1>
           <p className="pb-3">
-            Effixis is a swiss company delivering next generation products for 
+            Effixis is a swiss based company delivering next generation products for 
             financial institutions and service providers
           </p>
           <a className="btn btn-primary" href="about-us.html">
@@ -145,12 +146,7 @@ const Partners = () => (
 )   
 
 const Home = () => (
-  <>
-    <Head>
-      <title>Effixis SA</title>
-      <link rel="icon" href="/favicon.ico"/>
-    </Head>
-
+  <StandardLayout title='Home'>
     <HomeHeader></HomeHeader>
     <Mission></Mission>
     <Cleo></Cleo>
@@ -159,8 +155,7 @@ const Home = () => (
       <SstOnDemand></SstOnDemand>
     </div>
     <Partners></Partners>
-    <Footer></Footer>
-  </>
+  </StandardLayout>
 )
 
 export default Home;
