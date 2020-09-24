@@ -3,7 +3,7 @@ import StandardLayout from '../components/standard-layout'
 import { Row, Col, Container } from 'react-bootstrap'
 
 const HomeHeader = () => (
-  <Header>
+  <Header dividerColor="light">
     <Row>
       <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
         <h1 className="display-4">Simple solutions to complex problems</h1>
@@ -95,35 +95,45 @@ const SoftwareDevelopment = () => (
   </section>
 )
 
-const SstOnDemand = () => (
-  <section id="sst-on-demand" className="bg-white">
-    <Container>
-      <Row className="text-dark">
+const SstOnDemand = () => {
+  React.useEffect(() => {
+    window.addEventListener("scroll", (event) => {
+      const distance = window.scrollY;
+      console.log(distance);
+      document.querySelector("#iphone-chat").style.transform = `translateY(${- distance * 0.5 + 1100}px)`;
+    });
+  }, []);
 
-        <Col lg={5} xs={12} className="p-5">
-          <h1 className="pb-3">SST on-demand</h1>
-          <p className="pb-3">
-            Our simple &amp; convenient service allows you to get 
-            your market and credit risk ready on-demand.
-          </p>
-          <ul className="pb-3">
-            <li>Flat fee</li>
-            <li>Fast delivery</li>
-            <li>Custom reporting</li>
-          </ul>
-          <a className="btn btn-primary" href="contact.html">
-            Contact us
-          </a>
-        </Col>
+  return (
+    <section id="sst-on-demand" className="bg-white">
+      <Container>
+        <Row className="text-dark">
 
-        <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">
-          <img className="" src="/images/illustrations/iphone-chat.svg"></img>
-        </Col>
+          <Col lg={5} xs={12} className="p-5">
+            <h1 className="pb-3">SST on-demand</h1>
+            <p className="pb-3">
+              Our simple &amp; convenient service allows you to get 
+              your market and credit risk ready on-demand.
+            </p>
+            <ul className="pb-3">
+              <li>Flat fee</li>
+              <li>Fast delivery</li>
+              <li>Custom reporting</li>
+            </ul>
+            <a className="btn btn-primary" href="contact.html">
+              Contact us
+            </a>
+          </Col>
 
-      </Row>
-    </Container>
-  </section>
-)
+          <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">
+              <img id="iphone-chat" src="/images/illustrations/iphone-chat.svg"></img>
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+  )
+}
 
 const Partners = () => (
   <section id="partners" className="bg-gradient">
@@ -137,7 +147,7 @@ const Partners = () => (
           <img id="azenes" className="img-fluid" src="/images/partners/azenes.svg"></img>
         </Col>
         <Col lg={3} xs={6} className="p-5 d-flex align-items-center justify-content-start">
-          <img id="volada" className="img-fluid" src="/images/partners/volada-white.svg"></img>
+            <img id="volada" className="img-fluid" src="/images/partners/volada-white.svg"></img>
         </Col>
         
       </Row>

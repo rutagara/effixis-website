@@ -21,6 +21,11 @@
 #header {
     overflow: hidden;
 
+    #header-logo {
+        max-height: 40px;
+        max-width: 100%;
+    }
+
     #header-container {
         position: relative;
     }
@@ -55,10 +60,22 @@
             height: 120px;
             transform: rotateY(180deg); 
 
-            .shape-fill {
+            .shape-fill-light {
                 fill: $effixis-light;
             }
+
+            .shape-fill-white {
+                fill: white;
+            }
         }
+    }
+
+    #big-ampersand {
+        color: white;
+        font-size: 200px;
+        margin-bottom: -90px;
+        text-align: center;
+        line-height: 1;
     }
 }
 
@@ -107,8 +124,6 @@
     }
 }
 
-
-
 #partners {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -116,6 +131,11 @@
     #azenes, #volada {
         height: 100px;
     }
+}
+
+#partnerships {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 #footer {
@@ -128,3 +148,4 @@
         color: $effixis-scampi;
     }
 }
+
