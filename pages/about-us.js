@@ -1,161 +1,231 @@
 import Header from '../components/header'
 import StandardLayout from '../components/standard-layout'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Media } from 'react-bootstrap'
+import { TagCloud } from 'react-tagcloud'
 
 const AboutUsHeader = () => (
-  <Header>
+  <Header currentPage="about-us">
     <Row>
       <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
         <h1 className="display-4">Simple solutions to complex problems</h1>
+        <p>We are solving computational tasks for financial institutions, regulators &amp; service providers.</p>
         <span className="design-line"></span>
       </Col>
-
     </Row>
-
-    <div id="header-big-logo" className="d-lg-block d-none">
-      <img src="/images/brand/1000x1000-logo-icon.png"></img>
-    </div>
+    <img id="header-big-logo" className="d-lg-block d-none" src="/images/brand/logo-icon.svg"></img>
   </Header>
 )
 
-const Mission = () => (
-  <section id="mission" className="bg-light">
-    <Container>
-      <Row className="text-dark">
-        
-        <Col lg={6} xs={12} className="p-5">
-          <h1 className="pb-3">About the company</h1>
-          <p className="pb-3">
-            Effixis is a swiss based company delivering next generation products for 
-            financial institutions and service providers
-          </p>
-          <a className="btn btn-primary" href="about-us.html">
-            Learn more about us
-          </a>
-        </Col>
+const TrackRecord = () => {
 
-        <Col lg={6} id="switzerland-img-container" className="d-lg-block d-none">
-          <img src="/images/illustrations/switzerland.svg" id="img-switzerland"></img>
-        </Col>
-        
-      </Row>
-    </Container>
-  </section>
-)
+  let toMedia = (item, index) => (
+    <Media className="mb-3">
+      <img className="mr-2" src="/images/illustrations/circle-list.svg" height="24px"></img>
+      <Media.Body>
+        {item}
+      </Media.Body>
+    </Media>   
+  )
 
-const Cleo = () => (
-  <section id="product" className="bg-white">
-      <Container>
-        <Row className="text-dark">
+  let problemItems = [
+    "Swiss Solvency Test (SST): FINMA's risk-based solvency capital requirement regulation.",
+    "A mandatory yearly requirement for Swiss-licensed insurers.",
+    "Complex modeling of market, credit and insurance risks based on Monte-Carlo simulations.",
+    "Diverse reporting use cases."
+  ].map(toMedia)
 
-          <Col lg={8} xs={12} className="p-5">
-            <img className="img-fluid" src="/images/illustrations/macbook-with-product.png"></img>
+  let solutionItems = [
+    "Used by more than 100 insurance companies & FINMA",
+    "No bugs, no necessary support and maintenance in at least than 2 years",
+    "Completed in less than 5 months",
+    "Immediately adopted by the market"
+  ].map(toMedia)
+
+  return (
+    <section id="track-record" className="standard-section">
+      <Container> 
+        <div className="text-center px-5 mb-5">
+          <h1 className="mb-3">Our Track Record: the SST Tool</h1>
+          <p className="">We are best known for our very first project, the SST Tool. We developed this software on the behalf 
+            of FINMA, the Swiss Financial Market Supervisor Authority.</p>
+        </div>
+        <Row className="py-4">
+          <Col lg={6} xs={12} className="p-5">
+            <div className="mb-5">
+              <h3 className="font-weight-bold text-muted">Problem</h3>
+              <p>Introduce a new computational solvency regulatory model for Swiss insurers.</p>
+            </div>
+            {problemItems}
           </Col>
-
-          <Col lg={4} xs={12} className="p-5">
-            <h4 className="pb-3"><span className="font-weight-bold">
-              Cleo &trade;</span> makes SST reporting simpler than ever
-            </h4>
-            <p className="pb-3">
-              Contact us for a 15 minutes demonstration 
-              on tablet during your coffee break.
-            </p>
-            <a className="btn btn-secondary" href="/contact">
-              Book a Demo
-            </a>
+          <Col lg={6} xs={12} className="p-5">
+            <div className="mb-5">
+              <h3 className="font-weight-bold text-primary">Our Solution</h3>
+              <p>A simple software solution allowing each insurer to compute and report its solvency capital.</p>
+            </div>
+            {solutionItems}
           </Col>
-
         </Row>
       </Container>
     </section>
-)
+  )
+}
 
-const SoftwareDevelopment = () => (
-  <section id="software-dev" className="bg-light">
-    <Container>
-      <Row className="text-dark">
+const Comparison = () => {
+  return (
+    <section id="comparison" className="standard-section bg-white">
+      <Container fluid className="">
+        <Row className="justify-content-between">
+          <Col lg={6} xs={12} className="pr-3 pl-0 py-3">
+            <div id="vendors-cons-container" className="bg-light text-dark d-flex justify-content-end w-100">
+              <div id="vendors-cons" className="p-5">
+                <h3 className="mb-4">Traditional Vendors</h3>
+                <Media className="mb-3">
+                  <img className="mr-4 mt-2" src="/images/illustrations/minus-gradient.svg" width="24px"></img>
+                  <Media.Body>
+                    <h5 className="mt-0">Huge fit-for-all infrastructures.</h5>
+                    <p>Implementation, consulting &amp; training overhead.</p>
+                  </Media.Body>
+                </Media>  
+                <Media className="mb-3">
+                  <img className="mr-4 mt-2" src="/images/illustrations/minus-gradient.svg" width="24px"></img>
+                  <Media.Body>
+                    <h5 className="mt-0">Long-term locking licenses.</h5>
+                    <p>Reduced agility.</p>
+                  </Media.Body>
+                </Media>   
+              </div>
+            </div>
+          </Col>
+          <Col lg={6} xs={12} className="pl-3 pr-0 py-3">
+            <div id="effixis-pros-container" className="bg-gradient text-light d-flex justify-content-start w-100">
+              <div id="effixis-pros" className="p-5">
+                <h3 className="mb-4">Effixis</h3>
+                <Media className="mb-3">
+                  <img className="mr-4" src="/images/illustrations/plus-white.svg" width="24px"></img>
+                  <Media.Body>
+                    <h5 className="mt-0">Targeted &amp; intuitive apps and modules.</h5>
+                    <p>Teaches itself, get going now.</p>
+                  </Media.Body>
+                </Media>  
+                <Media className="mb-3">
+                  <img className="mr-4" src="/images/illustrations/plus-white.svg" width="24px"></img>
+                  <Media.Body>
+                    <h5 className="mt-0">No commitment, we bet on quality.</h5>
+                    <p>Move fast.</p>
+                  </Media.Body>
+                </Media> 
+              </div>    
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  )
+}
 
-        <Col lg={7} xs={12} className="p-5">
-          <h1 className="pb-3">Software development</h1>
-          <p className="pb-3">
-            Do you have a software development project in mind?<br/>
-            Contact us to establish an attractive partnership.
-          </p>
-          <a className="btn btn-primary" href="/contact">
-            Contact us
-          </a>
-        </Col>
+const Expertise = () => {
+  const tags = [
+    { value: 'Monte-Carlo', count: 5 },
+    { value: 'Greeks', count: 7 },
+    { value: 'Sensitivities', count: 10 },
+    { value: 'CVAs', count: 5 },
+    { value: 'sVSa', count: 6 },
+    { value: 'Regulation', count: 6 },
+    { value: 'ALM', count: 9 },
+    { value: 'Derivatives', count: 4 },
+    { value: 'NLP', count: 5 },
+    { value: 'Calibration', count: 6 },
+    { value: 'Volatility Surfaces', count: 4 },
+    { value: 'Curve building', count: 5 },
+    { value: 'AI', count: 6 },
+    { value: 'Machine Learning', count: 7 },
+    { value: 'Real-time analytics', count: 12 },
+    { value: 'Large scale apps', count: 6 },
+    { value: 'Docker', count: 5 },
+    { value: 'Parallelism and concurrency', count: 6 },
+    { value: 'Low-level optimization', count: 5 },
+    { value: 'Automatic Adjoint', count: 4 },
+    { value: 'Differentiation (AAD)', count: 7 },
+    { value: 'Investment Management Processes', count: 5 },
+    { value: 'Option Trading', count: 9 },
+    { value: 'Hedging', count: 6 },
+    { value: 'User Interfaces (UI)', count: 5 },
+    { value: 'Cloud', count: 6 },
+    { value: 'Capital requirement management', count: 8 },
+    { value: 'Capital optimization', count: 5 },
+    { value: 'Capital management', count: 7 },
+    { value: 'Economic Scenario Generators', count: 5 },
+    { value: 'Pricing', count: 10 },
+    { value: 'FX overlay', count: 6 },
+    { value: 'Financial data', count: 5 },
+    { value: 'Financial APIs', count: 7 },
+    { value: 'Scala', count: 5 },
+    { value: 'Java', count: 5 },
+    { value: 'C', count: 6 },
+    { value: 'C++', count: 4 },
+    { value: 'R', count: 7 },
+    { value: 'Python', count: 5 },
+    { value: 'React.js', count: 6 },
+    { value: 'Next.js', count: 9 },
+    { value: 'Node.js', count: 6 }
+  ]
 
-        <Col lg={5} id="software-dev-icon-with-gear" className="p-5 d-lg-block d-none">
-          <img className="img-fluid" src="/images/brand/logo_icon_with_gear.svg"></img>
-        </Col>
+  let colorOptions = {
+    hue : '#66589F',
+    luminosity: 'dark'
+  }
 
-      </Row>
-    </Container>
-  </section>
-)
+  return (
+    <section id="expertise" className="text-dark standard-section bg-light">
+      <Container>
+        <h1 className="mb-3 px-5 text-center">Our expertise</h1>
+        <TagCloud className="p-5 text-center" tags={tags} minSize={12} maxSize={35} shuffle={false} colorOptions={colorOptions}/>
+      </Container>
+  
+    </section>
+  )
+}
+ 
+const Team = () => {
+  let toTeamItem = (info) => (
+    <Col lg={4} xs={12} className="p-5">
+      <img src={"/images/team/" + info.id + ".png"} className="team-member-picture mb-3"></img>
+      <h4>{info.fullName}</h4>
+      <p>{info.title}</p>
+    </Col>
+  )
+  let teamItems = [
+    { id: 'melvin', fullName: 'Melvin Kianmanesh-Rad', title: 'CEO'},
+    { id: 'adrien', fullName: 'Adrien Lamit', title: 'CTO'},
+    { id: 'loris', fullName: 'Loris Michel', title: 'Scientist'},
+    { id: 'joe', fullName: 'Pr. Joe Peppard', title: 'Principal research scientist @ mit sloan'},
+    { id: 'roger', fullName: 'Dr. Roger Meli', title: 'Head of risk & refulation @ azenes ag'},
+  ].map(toTeamItem)
 
-const SstOnDemand = () => (
-  <section id="sst-on-demand" className="bg-white">
-    <Container>
-      <Row className="text-dark">
+  return (
+    <section id="team" className="standard-section bg-white">
+      <Container>
+        <div className="mb-3 px-5 text-center">
+          <h1 className="mb-2">Meet our team</h1>
+          <p>Founders &amp; Advisors</p>
+        </div>
+        <Row>
+          {teamItems}
+        </Row>
+      </Container>
+      
+    </section>
+  )
+}
 
-        <Col lg={5} xs={12} className="p-5">
-          <h1 className="pb-3">SST on-demand</h1>
-          <p className="pb-3">
-            Our simple &amp; convenient service allows you to get 
-            your market and credit risk ready on-demand.
-          </p>
-          <ul className="pb-3">
-            <li>Flat fee</li>
-            <li>Fast delivery</li>
-            <li>Custom reporting</li>
-          </ul>
-          <a className="btn btn-primary" href="contact.html">
-            Contact us
-          </a>
-        </Col>
-
-        <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">
-          <img className="" src="/images/illustrations/iphone-chat.svg"></img>
-        </Col>
-
-      </Row>
-    </Container>
-  </section>
-)
-
-const Partners = () => (
-  <section id="partners" className="bg-gradient">
-    <Container>
-      <Row className="text-light">
-
-        <Col lg={6} className="col-lg-6 p-5 d-flex align-items-center">
-          <h1>Meet our partners</h1>
-        </Col>
-        <Col lg={3} xs={6} className="col-lg-3 p-5 d-flex align-items-center justify-content-start">
-          <img id="azenes" className="img-fluid" src="/images/partners/azenes.svg"></img>
-        </Col>
-        <Col lg={3} xs={6} className="p-5 d-flex align-items-center justify-content-start">
-          <img id="volada" className="img-fluid" src="/images/partners/volada-white.svg"></img>
-        </Col>
-        
-      </Row>
-    </Container>
-  </section>
-)   
-
-const Home = () => (
-  <StandardLayout title='Home'>
+const AboutUs = () => (
+  <StandardLayout title="About Us">
     <AboutUsHeader></AboutUsHeader>
-    <Mission></Mission>
-    <Cleo></Cleo>
-    <div id="smart-group">
-      <SoftwareDevelopment></SoftwareDevelopment>
-      <SstOnDemand></SstOnDemand>
-    </div>
-    <Partners></Partners>
+    <TrackRecord></TrackRecord>
+    <Comparison></Comparison>
+    <Expertise></Expertise>
+    <Team></Team>
   </StandardLayout>
 )
 
-export default Home;
+export default AboutUs;

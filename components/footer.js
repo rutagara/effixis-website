@@ -1,10 +1,10 @@
-import { Container, Col, Row, Nav } from 'react-bootstrap'
+import { Container, Col, Row, Nav, Media } from 'react-bootstrap'
 import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => (
-    <section id="footer" className="bg-light">
+    <section id="footer" className="bg-light standard-section">
       <Container fluid className="large-container">
         <Row>
           <Col lg={4} xs={12} className="p-5">
@@ -38,23 +38,33 @@ const Footer = () => (
           <Col lg={4} className="p-5">
             <h4 className="mb-4">Contact us</h4>
             <ul className="list-unstyled">
-              <li className="media mb-3">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="footer-icon"/> 
-                <div className="media-body">
-                  Aegeristrasse 7, 6300 Zug, Switzerland
-                </div>
+              <li className="mb-3">
+                <Media>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="footer-icon"/> 
+                  <Media.Body>
+                    Aegeristrasse 7, 6300 Zug, Switzerland
+                  </Media.Body>
+                </Media>
+              </li>
+              <li className="mb-3">
+                <a href="mailto:contact@effixis.ch">
+                  <Media>
+                    <FontAwesomeIcon icon={faEnvelope} className="footer-icon"/>
+                    <Media.Body>
+                      contact@effixis.ch
+                    </Media.Body>
+                  </Media>
+                </a>
               </li>
               <li className="media mb-3">
-                <FontAwesomeIcon icon={faEnvelope} className="footer-icon"/>
-                <div className="media-body">
-                  contact@effixis.ch
-                </div>
-              </li>
-              <li className="media mb-3">
-                <FontAwesomeIcon icon={faLinkedin} className="footer-icon"/>
-                <div className="media-body">
-                  Follow us on linkedin
-                </div>
+                <a href="https://www.linkedin.com/company/effixis" target="_blank">
+                  <Media>
+                    <FontAwesomeIcon icon={faLinkedin} className="footer-icon"/>
+                    <Media.Body>
+                      Follow us on linkedin
+                    </Media.Body>
+                  </Media>
+                </a>
               </li>
             </ul>
           </Col>

@@ -1,16 +1,15 @@
 import Header from '../components/header'
 import StandardLayout from '../components/standard-layout'
-import { Row, Col, Container } from 'react-bootstrap'
+import ContactForm from '../components/contact-form'
+import { Row, Col, Container, Media } from 'react-bootstrap'
 
 const SoftwareDevelopmentHeader = () => (
-  <Header>
-    <div id="big-ampersand">
+  <Header dividerColor="light" currentPage="software-development">
+    <div id="big-ampersand" className="text-light font-weight-bold">
       &amp;
     </div>
   </Header>
 )
-
-
 
 const Partnerships = () => {
   let subjects = [
@@ -45,28 +44,38 @@ const Partnerships = () => {
     {
       title: "Client Reporting",
       content: "Improve and simplify the reporting of complex topics to increase customer satisfaction."
+    },
+    {
+      title: "Asset Management",
+      content: "Manage your clients regulatory requirements efficiently"
+    },
+    {
+      title: "Consulting",
+      content: "Build the next generation of tools to improve, simplfy and automate your services"
     }
   ];
 
-  let items = subjects.map(s => (
-    <Col lg={6} xs={12} className="media px-5 py-4">
-      <img className="mr-2" src="/images/illustrations/circle-list.svg" height="24px"></img>
-      <div className="media-body">
-        <h5 className="mt-0">{s.title}</h5>
-        {s.content}
-      </div>
+  let items = subjects.map((s, index) => (
+    <Col lg={6} xs={12} key={index} className="media px-5 py-4">
+      <Media>
+        <img className="mr-2" src="/images/illustrations/circle-list.svg" height="24px"></img>
+        <Media.Body>
+          <h5 className="mt-0">{s.title}</h5>
+          {s.content}
+        </Media.Body>
+      </Media>   
     </Col>
   ));
 
   return (
-    <section id="partnerships" className="bg-white">
+    <section id="partnerships" className="bg-light standard-section">
       <Container> 
-        <div id="partnership-title" className="text-center mb-5">
-          <h1 className="pb-3 text-muted font-weight-bold">Have an idea ?</h1>
+        <div id="partnership-title" className="text-center px-5 mb-5">
+          <h1 className="pb-3 text-primary font-weight-bold">Have an idea ?</h1>
           <p>Our product development is driven by collaboration.</p>
           <p>Contact us for highly attractive development partnerships !</p>
         </div>
-        <Row className="py-5">
+        <Row className="py-4">
           {items}
         </Row>
       </Container>
@@ -74,11 +83,12 @@ const Partnerships = () => {
   )
 }
 
-const Home = () => (
-  <StandardLayout title='Home'>
+const SoftwareDevelopment = () => (
+  <StandardLayout title='Software Development'>
     <SoftwareDevelopmentHeader></SoftwareDevelopmentHeader>
     <Partnerships></Partnerships>
+    <ContactForm></ContactForm>
   </StandardLayout>
 )
 
-export default Home;
+export default SoftwareDevelopment;

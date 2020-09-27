@@ -2,32 +2,28 @@ import Header from '../components/header'
 import StandardLayout from '../components/standard-layout'
 import { Row, Col, Container } from 'react-bootstrap'
 
+
 const HomeHeader = () => (
-  <Header dividerColor="light">
+  <Header dividerColor="light" currentPage="">
     <Row>
       <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
         <h1 className="display-4">Simple solutions to complex problems</h1>
         <span className="design-line"></span>
       </Col>
-
+      <img id="header-big-logo" className="d-lg-block d-none" src="/images/brand/logo-icon.svg"></img>
     </Row>
-
-    <div id="header-big-logo" className="d-lg-block d-none">
-      <img src="/images/brand/1000x1000-logo-icon.png"></img>
-    </div>
   </Header>
 )
 
 const Mission = () => (
-  <section id="mission" className="bg-light">
+  <section id="mission" className="bg-light standard-section">
     <Container>
       <Row className="text-dark">
         
         <Col lg={6} xs={12} className="p-5">
           <h1 className="pb-3">About the company</h1>
           <p className="pb-3">
-            Effixis is a swiss based company delivering next generation products for 
-            financial institutions and service providers
+            Effixis is a swiss based company solving computational tasks for financial institutions, regulators &amp; service providers.
           </p>
           <a className="btn btn-primary" href="about-us.html">
             Learn more about us
@@ -44,7 +40,7 @@ const Mission = () => (
 )
 
 const Cleo = () => (
-  <section id="product" className="bg-white">
+  <section id="product" className="bg-white standard-section">
       <Container>
         <Row className="text-dark">
 
@@ -71,7 +67,7 @@ const Cleo = () => (
 )
 
 const SoftwareDevelopment = () => (
-  <section id="software-dev" className="bg-light">
+  <section id="software-dev" className="bg-light standard-section">
     <Container>
       <Row className="text-dark">
 
@@ -81,7 +77,7 @@ const SoftwareDevelopment = () => (
             Do you have a software development project in mind?<br/>
             Contact us to establish an attractive partnership.
           </p>
-          <a className="btn btn-primary" href="/contact">
+          <a className="btn btn-primary" href="/software-development#contact-form">
             Contact us
           </a>
         </Col>
@@ -105,7 +101,7 @@ const SstOnDemand = () => {
   }, []);
 
   return (
-    <section id="sst-on-demand" className="bg-white">
+    <section id="sst-on-demand" className="bg-white standard-section">
       <Container>
         <Row className="text-dark">
 
@@ -136,7 +132,7 @@ const SstOnDemand = () => {
 }
 
 const Partners = () => (
-  <section id="partners" className="bg-gradient">
+  <section id="partners" className="bg-gradient standard-section">
     <Container>
       <Row className="text-light">
 
@@ -155,17 +151,19 @@ const Partners = () => (
   </section>
 )   
 
-const Home = () => (
-  <StandardLayout title='Home'>
-    <HomeHeader></HomeHeader>
-    <Mission></Mission>
-    <Cleo></Cleo>
-    <div id="smart-group">
-      <SoftwareDevelopment></SoftwareDevelopment>
-      <SstOnDemand></SstOnDemand>
-    </div>
-    <Partners></Partners>
-  </StandardLayout>
-)
+const Home = () => {
+  return (
+    <StandardLayout title='Home'>
+      <HomeHeader></HomeHeader>
+      <Mission></Mission>
+      <Cleo></Cleo>
+      <div id="smart-group">
+        <SoftwareDevelopment></SoftwareDevelopment>
+        <SstOnDemand></SstOnDemand>
+      </div>
+      <Partners></Partners>
+    </StandardLayout>
+  )
+}
 
 export default Home;

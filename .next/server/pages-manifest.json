@@ -2,6 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/software-development": "pages/software-development.js"
+  "/about-us": "pages/about-us.js",
+  "/cleo": "pages/cleo.js",
+  "/software-development": "pages/software-development.js",
+  "/sst-on-demand": "pages/sst-on-demand.js",
+  "/": "pages/index.js"
 }

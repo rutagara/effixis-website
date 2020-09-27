@@ -1,5 +1,9 @@
 @import 'effixis';
 
+.overflow-show {
+    overflow: show;
+}
+
 .design-line {
     height: 8px;
     width: 60px;
@@ -19,8 +23,6 @@
 }
 
 #header {
-    overflow: hidden;
-
     #header-logo {
         max-height: 40px;
         max-width: 100%;
@@ -36,22 +38,30 @@
     }
     
     #header-big-logo {
-        img {
-            -webkit-transform: rotate(90deg);
-            -moz-transform: rotate(90deg);
-            -o-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-            position: absolute;
-            right: 0;
-            height: 600px;
-            bottom: -200px;
-        }
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        position: absolute;
+        right: 0;
+        bottom: -100px;
+        height: 450px;
+        max-width: 60%;
+    }
+
+    #cleo-big-logo {
+        position: absolute;
+        right: 0;
+        max-height: 500px;
+        bottom: -100px;
+        width: auto;
+        max-width: 60%;
+        z-index: 1;
     }
 
     .custom-shape-divider {
         width: 100%;
-        overflow: hidden;
         line-height: 0;
         transform: rotate(180deg); 
 
@@ -59,6 +69,7 @@
             width: calc(100% + 1.3px);
             height: 120px;
             transform: rotateY(180deg); 
+            z-index: -1;
 
             .shape-fill-light {
                 fill: $effixis-light;
@@ -80,34 +91,18 @@
 }
 
 #mission {
-    padding-top: 80px;
-    padding-bottom: 80px;
-
     #switzerland-img-container {
         #img-switzerland {
             width: calc(100% + 180px);
             margin-left: -180px;
-            z-index: 0;
         }
     }
-}
-
-#product {
-    padding-top: 80px;
-    padding-bottom: 80px; 
-}
-
-#software-dev {
-    padding-top: 80px;
-    padding-bottom: 80px; 
 }
 
 #smart-group {
     overflow: hidden;
 
     #sst-on-demand {
-        padding-top: 80px;
-        padding-bottom: 80px;
         overflow: visible;
     
         #sst-on-demand-iphone-chat {
@@ -125,23 +120,57 @@
 }
 
 #partners {
-    padding-top: 80px;
-    padding-bottom: 80px;
-
     #azenes, #volada {
         height: 100px;
     }
 }
 
-#partnerships {
+.standard-section {
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-#footer {
-    padding-top: 80px;
-    padding-bottom: 80px;
+.standard-icon {
+    height: 100px;
+}
 
+#track-record {
+    padding-bottom: 0;
+}
+
+#comparison {
+    padding-bottom: 200px;
+
+    #vendors-cons-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border-radius: 0 9999px 9999px 0;
+    }
+
+    #vendors-cons {
+        max-width: 500px;
+        margin-right: 10%;
+    }
+
+    #effixis-pros-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border-radius: 9999px 0 0 9999px;
+    }
+
+    #effixis-pros {
+        max-width: 500px;
+        margin-left: 10%;
+    }
+}
+
+#team {
+    .team-member-picture {
+        width: 100%;
+    }
+}
+
+#footer {
     .footer-icon {
         width: 24px;
         margin-right: 12px;

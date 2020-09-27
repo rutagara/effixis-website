@@ -1,11 +1,13 @@
-
-$effixis-scampi: #66589F;
-$effixis-steel-blue: #3F7DBE;
-$effixis-astronaut: #243565;
-$effixis-black: #050606;
-$effixis-light: #EEF0F3;
+@import "variables";
 
 $font-family-sans-serif: Inter, sans-serif;
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 1080px,
+  xl: 1200px
+);
 
 $theme-colors: (
     "primary": $effixis-scampi,

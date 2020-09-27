@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 
 const Header = (props) => (
-  <section id="header" className="bg-gradient">
+  <section id="header" className={"bg-gradient overflow-" + props.overflow}>
     <Container fluid id="header-container" className="large-container">
       <Navbar expand="xl" className="py-5 navbar-dark">
 
@@ -12,7 +12,7 @@ const Header = (props) => (
         <Navbar.Toggle aria-controls="main-nav" />
 
         <Navbar.Collapse id="main-nav">
-          <Nav className="ml-auto">
+          <Nav className="ml-auto" activeKey={"/" + props.currentPage}>
             <Nav.Link className="p-3" href="/">Home</Nav.Link>
             <Nav.Link className="p-3" href="/cleo">Cleo&trade;</Nav.Link>
             <Nav.Link className="p-3" href="/software-development">Software Development</Nav.Link>
@@ -35,7 +35,8 @@ const Header = (props) => (
 );
 
 Header.defaultProps = {
-  dividerColor: 'white'
+  dividerColor: 'white',
+  overflow: 'hidden'
 }
 
 export default Header;

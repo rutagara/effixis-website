@@ -29,10 +29,25 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about-us": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/about-us.js"
+    ],
+    "/cleo": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/cleo.js"
+    ],
     "/software-development": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/software-development.js"
+    ],
+    "/sst-on-demand": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/sst-on-demand.js"
     ]
   },
   "ampFirstPages": []
