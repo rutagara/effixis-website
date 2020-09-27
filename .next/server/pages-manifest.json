@@ -1,10 +1,11 @@
 {
   "/_app": "pages/_app.js",
+  "/about-us": "pages/about-us.html",
+  "/cleo": "pages/cleo.html",
+  "/": "pages/index.html",
+  "/software-development": "pages/software-development.html",
+  "/sst-on-demand": "pages/sst-on-demand.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about-us": "pages/about-us.js",
-  "/cleo": "pages/cleo.js",
-  "/software-development": "pages/software-development.js",
-  "/sst-on-demand": "pages/sst-on-demand.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
