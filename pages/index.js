@@ -1,6 +1,6 @@
 import Header from '../components/header'
 import StandardLayout from '../components/standard-layout'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Button } from 'react-bootstrap'
 
 
 const HomeHeader = () => (
@@ -25,9 +25,9 @@ const Mission = () => (
           <p className="pb-3">
             Effixis is a swiss based company solving computational tasks for financial institutions, regulators &amp; service providers.
           </p>
-          <a className="btn btn-primary" href="about-us.html">
+          <Button variant="primary" href="/about-us">
             Learn more about us
-          </a>
+          </Button>
         </Col>
 
         <Col lg={6} id="switzerland-img-container" className="d-lg-block d-none">
@@ -56,9 +56,9 @@ const Cleo = () => (
               Contact us for a 15 minutes demonstration 
               on tablet during your coffee break.
             </p>
-            <a className="btn btn-secondary" href="/contact">
+            <Button variant="secondary" href="/cleo#contact-form">
               Book a Demo
-            </a>
+            </Button>
           </Col>
 
         </Row>
@@ -77,9 +77,9 @@ const SoftwareDevelopment = () => (
             Do you have a software development project in mind?<br/>
             Contact us to establish an attractive partnership.
           </p>
-          <a className="btn btn-primary" href="/software-development#contact-form">
+          <Button className="primary" href="/software-development#contact-form">
             Contact us
-          </a>
+          </Button>
         </Col>
 
         <Col lg={5} id="software-dev-icon-with-gear" className="p-5 d-lg-block d-none">
@@ -116,9 +116,9 @@ const SstOnDemand = () => {
               <li>Fast delivery</li>
               <li>Custom reporting</li>
             </ul>
-            <a className="btn btn-primary" href="contact.html">
+            <Button variant="primary" href="sst-on-demand/#contact-form">
               Contact us
-            </a>
+            </Button>
           </Col>
 
           <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">

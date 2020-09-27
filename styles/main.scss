@@ -22,10 +22,22 @@
     max-width: min(80%, 1800px);
 }
 
+.btn {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
 #header {
-    #header-logo {
-        max-height: 40px;
-        max-width: 100%;
+
+    .navbar-brand {
+        max-width: 50% !important;
+    }
+
+    .header-logo {
+        height: 40px;
     }
 
     #header-container {

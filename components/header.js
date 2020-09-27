@@ -5,19 +5,20 @@ const Header = (props) => (
     <Container fluid id="header-container" className="large-container">
       <Navbar expand="xl" className="py-5 navbar-dark">
 
-        <Navbar.Brand className="" href="/">
-          <img id="header-logo" src="images/brand/logo_white_text.svg" alt="logo"></img>
+        <Navbar.Brand href="/">
+          <img className="header-logo d-md-block d-none" src="images/brand/logo_white_text.svg" alt="logo"></img>
+          <img className="header-logo d-md-none d-block" src="images/brand/logo-icon-white.svg" alt="logo"></img>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="main-nav" />
 
         <Navbar.Collapse id="main-nav">
           <Nav className="ml-auto" activeKey={"/" + props.currentPage}>
-            <Nav.Link className="p-3" href="/">Home</Nav.Link>
-            <Nav.Link className="p-3" href="/cleo">Cleo&trade;</Nav.Link>
-            <Nav.Link className="p-3" href="/software-development">Software Development</Nav.Link>
-            <Nav.Link className="p-3" href="/sst-on-demand">SST On-Demand</Nav.Link>
-            <Nav.Link className="p-3" href="/about-us">About Us</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/">Home</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/cleo">Cleo&trade;</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/software-development">Software Development</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/sst-on-demand">SST On-Demand</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/about-us">About Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
