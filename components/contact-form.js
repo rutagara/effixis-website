@@ -14,7 +14,7 @@ const ContactForm = (props) => (
             <Form.Group controlId="exampleForm.ControlTextarea1">
                 <Form.Control as="textarea" rows="3" placeholder="Message"></Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className="hover-up" variant="primary" type="submit">
                 Send
             </Button>
         </Form>

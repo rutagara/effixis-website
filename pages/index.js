@@ -25,7 +25,7 @@ const Mission = () => (
           <p className="pb-3">
             Effixis is a swiss based company solving computational tasks for financial institutions, regulators &amp; service providers.
           </p>
-          <Button variant="primary" href="/about-us">
+          <Button className="hover-up" variant="primary" href="/about-us">
             Learn more about us
           </Button>
         </Col>
@@ -56,7 +56,7 @@ const Cleo = () => (
               Contact us for a 15 minutes demonstration 
               on tablet during your coffee break.
             </p>
-            <Button variant="secondary" href="/cleo#contact-form">
+            <Button className="hover-up" variant="secondary" href="/cleo#contact-form">
               Book a Demo
             </Button>
           </Col>
@@ -77,7 +77,7 @@ const SoftwareDevelopment = () => (
             Do you have a software development project in mind?<br/>
             Contact us to establish an attractive partnership.
           </p>
-          <Button className="primary" href="/software-development#contact-form">
+          <Button className="hover-up" variant="primary" href="/software-development#contact-form">
             Contact us
           </Button>
         </Col>
@@ -116,7 +116,7 @@ const SstOnDemand = () => {
               <li>Fast delivery</li>
               <li>Custom reporting</li>
             </ul>
-            <Button variant="primary" href="sst-on-demand/#contact-form">
+            <Button className="hover-up" variant="primary" href="sst-on-demand/#contact-form">
               Contact us
             </Button>
           </Col>
@@ -124,7 +124,6 @@ const SstOnDemand = () => {
           <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">
               <img id="iphone-chat" src="/images/illustrations/iphone-chat.svg"></img>
           </Col>
-
         </Row>
       </Container>
     </section>
@@ -140,16 +139,20 @@ const Partners = () => (
           <h1>Meet our partners</h1>
         </Col>
         <Col lg={3} xs={6} className="col-lg-3 p-5 d-flex align-items-center justify-content-start">
-          <img id="azenes" className="img-fluid" src="/images/partners/azenes.svg"></img>
+          <a className="hover-up" href="https://www.azenes.ch/" target="_blank">
+            <img id="azenes" className="partner-logo" src="/images/partners/azenes.svg"></img>
+          </a>
         </Col>
         <Col lg={3} xs={6} className="p-5 d-flex align-items-center justify-content-start">
-            <img id="volada" className="img-fluid" src="/images/partners/volada-white.svg"></img>
+          <a className="hover-up" href="https://www.volada.ch/en/" target="_blank">
+            <img id="volada" className="partner-logo" src="/images/partners/volada-white.svg"></img>
+          </a>
         </Col>
         
       </Row>
     </Container>
   </section>
-)   
+)
 
 const Home = () => {
   return (
