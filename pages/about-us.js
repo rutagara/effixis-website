@@ -24,7 +24,7 @@ const TrackRecord = () => {
       <Media.Body>
         {item}
       </Media.Body>
-    </Media>   
+    </Media>
   )
 
   let problemItems = [
@@ -43,10 +43,10 @@ const TrackRecord = () => {
 
   return (
     <section id="track-record" className="standard-section">
-      <Container> 
+      <Container>
         <div className="text-center px-5 mb-5">
           <h1 className="mb-3">Our Track Record: the SST Tool</h1>
-          <p className="">We are best known for our very first project, the SST Tool. We developed this software on the behalf 
+          <p className="">We are best known for our very first project, the SST Tool. We developed this software on the behalf
             of FINMA, the Swiss Financial Market Supervisor Authority.</p>
         </div>
         <Row className="py-4">
@@ -85,14 +85,14 @@ const Comparison = () => {
                     <h5 className="mt-0">Huge fit-for-all infrastructures.</h5>
                     <p>Implementation, consulting &amp; training overhead.</p>
                   </Media.Body>
-                </Media>  
+                </Media>
                 <Media className="mb-3">
                   <img className="mr-4 mt-2" src="/images/illustrations/minus-gradient.svg" width="24px"></img>
                   <Media.Body>
                     <h5 className="mt-0">Long-term locking licenses.</h5>
                     <p>Reduced agility.</p>
                   </Media.Body>
-                </Media>   
+                </Media>
               </div>
             </div>
           </Col>
@@ -106,15 +106,15 @@ const Comparison = () => {
                     <h5 className="mt-0">Targeted &amp; intuitive apps and modules.</h5>
                     <p>Teaches itself, get going now.</p>
                   </Media.Body>
-                </Media>  
+                </Media>
                 <Media className="mb-3">
                   <img className="mr-4" src="/images/illustrations/plus-white.svg" width="24px"></img>
                   <Media.Body>
                     <h5 className="mt-0">No commitment, we bet on quality.</h5>
                     <p>Move fast.</p>
                   </Media.Body>
-                </Media> 
-              </div>    
+                </Media>
+              </div>
             </div>
           </Col>
         </Row>
@@ -129,24 +129,24 @@ const Expertise = () => {
     { value: 'Greeks', count: 7 },
     { value: 'Sensitivities', count: 10 },
     { value: 'CVAs', count: 5 },
-    { value: 'sVSa', count: 6 },
-    { value: 'Regulation', count: 6 },
+    { value: 'xVAs', count: 6 },
+    { value: 'Regulation', count: 8 },
     { value: 'ALM', count: 9 },
     { value: 'Derivatives', count: 4 },
     { value: 'NLP', count: 5 },
     { value: 'Calibration', count: 6 },
     { value: 'Volatility Surfaces', count: 4 },
-    { value: 'Curve building', count: 5 },
+    { value: 'Curve fitting', count: 5 },
     { value: 'AI', count: 6 },
     { value: 'Machine Learning', count: 7 },
     { value: 'Real-time analytics', count: 12 },
     { value: 'Large scale apps', count: 6 },
     { value: 'Docker', count: 5 },
-    { value: 'Parallelism and concurrency', count: 6 },
+    { value: 'Distributed computing', count: 6 },
     { value: 'Low-level optimization', count: 5 },
-    { value: 'Automatic Adjoint', count: 4 },
-    { value: 'Differentiation (AAD)', count: 7 },
-    { value: 'Investment Management Processes', count: 5 },
+    { value: 'Automatic Adjoint Differentiation (AAD)', count: 7 },
+    { value: 'Investment management processes', count: 5 },
+    { value: 'Fundamental analysis', count: 5 },
     { value: 'Option Trading', count: 9 },
     { value: 'Hedging', count: 6 },
     { value: 'User Interfaces (UI)', count: 5 },
@@ -159,14 +159,14 @@ const Expertise = () => {
     { value: 'FX overlay', count: 6 },
     { value: 'Financial data', count: 5 },
     { value: 'Financial APIs', count: 7 },
-    { value: 'Scala', count: 5 },
+    { value: 'Scala', count: 9 },
     { value: 'Java', count: 5 },
     { value: 'C', count: 6 },
     { value: 'C++', count: 4 },
     { value: 'R', count: 7 },
     { value: 'Python', count: 5 },
-    { value: 'React.js', count: 6 },
-    { value: 'Next.js', count: 9 },
+    { value: 'React.js', count: 7 },
+    { value: 'Next.js', count: 6 },
     { value: 'Node.js', count: 6 }
   ]
 
@@ -181,11 +181,11 @@ const Expertise = () => {
         <h1 className="mb-3 px-5 text-center">Our expertise</h1>
         <TagCloud className="p-5 text-center" tags={tags} minSize={12} maxSize={35} shuffle={false} colorOptions={colorOptions}/>
       </Container>
-  
+
     </section>
   )
 }
- 
+
 const Team = () => {
   let toTeamItem = (info) => (
     <Col lg={4} xs={12} className="p-5">
@@ -195,11 +195,11 @@ const Team = () => {
     </Col>
   )
   let teamItems = [
-    { id: 'melvin', fullName: 'Melvin Kianmanesh-Rad', title: 'CEO'},
+    { id: 'melvin', fullName: 'Melvin Kianmanesh Rad', title: 'CEO'},
     { id: 'adrien', fullName: 'Adrien Lamit', title: 'CTO'},
     { id: 'loris', fullName: 'Loris Michel', title: 'Scientist'},
-    { id: 'joe', fullName: 'Pr. Joe Peppard', title: 'Principal research scientist @ mit sloan'},
-    { id: 'roger', fullName: 'Dr. Roger Meli', title: 'Head of risk & refulation @ azenes ag'},
+    { id: 'joe', fullName: 'Pr. Joe Peppard', title: 'Principal research scientist @ MIT Sloan'},
+    { id: 'roger', fullName: 'Dr. Roger Meli', title: 'Head of risk & regulation @ Azenes AG'},
   ].map(toTeamItem)
 
   return (
@@ -213,7 +213,7 @@ const Team = () => {
           {teamItems}
         </Row>
       </Container>
-      
+
     </section>
   )
 }
