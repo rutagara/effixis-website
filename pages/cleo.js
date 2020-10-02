@@ -8,7 +8,7 @@ const CleoHeader = () => (
     <Row>
       <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
         <h1 className="display-4">Welcome Cleo &trade;</h1>
-        <p>The best software solution for your analytical needs</p>
+        <p>The simplest way to compute &amp; understand your SST.</p>
         <span className="design-line"></span>
       </Col>
 
@@ -20,11 +20,11 @@ const CleoHeader = () => (
 
 const Introduction = () => (
   <section id="introduction" className="bg-white standard-section">
-      <Container> 
+      <Container>
         <div id="introduction-title" className="text-center px-5 mb-5">
-          <h5>SST Market &amp; Credit risk ?</h5>
-          <h1 className="my-3 text-primary font-weight-bold">We make it easy for you !</h1>
-          <p>Breakthrough product, intuitive, answers all your problems &amp; questions.</p>
+          <h5>SST Market &amp; Credit risk</h5>
+          <h1 className="my-3 text-primary font-weight-bold">Get it done in minutes!</h1>
+          <p>A breakthrough for regulatory capital management. Reconciliate the SST with the investment world.</p>
         </div>
         <Row className="py-5">
           <Col lg={4} className="text-center p-3">
@@ -51,7 +51,7 @@ const Steps = () => (
   <section id="steps" className="bg-light standard-section">
     <Container>
       <div id="introduction-title" className="text-center px-5 mb-5">
-        <h1 className="my-3">Cleo&trade; is easy as 1-2-3 !</h1>
+        <h1 className="my-3">Cleo&trade; is as easy as 1-2-3 !</h1>
       </div>
       <Row>
         <Col lg={7} xs={12} className="p-5 d-flex align-items-center">
@@ -65,7 +65,7 @@ const Steps = () => (
             <Media.Body>
               <h5>1. Input</h5>
               <p>
-                Input excel data directly from your custodian.
+                Convenient Excel input directly from your custodian bank data.
               </p>
             </Media.Body>
           </Media>
@@ -74,7 +74,7 @@ const Steps = () => (
             <Media.Body>
               <h5>2. Evaluate</h5>
               <p>
-                See SST ratio &amp; figures. Download SST template for Finma reporting. Instantaneously.
+                View your SST Ratio. Download your SST template for FINMA reporting. Instantaneously.
               </p>
             </Media.Body>
           </Media>
@@ -83,8 +83,8 @@ const Steps = () => (
             <Media.Body>
               <h5>3. Analyse</h5>
               <p>
-                What if? Portfolio reallocation, solvency scenarios, exact contribution of each instrument 
-                to the capital...
+                Compare alternative allocations. Unique and simple what if & macroeconomic solvency scenarios. Exact contribution of each instrument
+                to the solvency capital.
               </p>
             </Media.Body>
           </Media>
