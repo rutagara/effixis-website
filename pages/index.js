@@ -19,7 +19,7 @@ const Mission = () => (
   <section id="mission" className="bg-light standard-section">
     <Container>
       <Row className="text-dark">
-        
+
         <Col lg={6} xs={12} className="p-5">
           <h1 className="pb-3">About the company</h1>
           <p className="pb-3">
@@ -33,7 +33,7 @@ const Mission = () => (
         <Col lg={6} id="switzerland-img-container" className="d-lg-block d-none">
           <img src="/images/illustrations/switzerland.svg" id="img-switzerland"></img>
         </Col>
-        
+
       </Row>
     </Container>
   </section>
@@ -52,8 +52,13 @@ const Cleo = () => (
             <h4 className="pb-3"><span className="font-weight-bold">
               Cleo &trade;</span> makes SST reporting simpler than ever
             </h4>
+            <ul className="pb-3">
+              <li>Automated SST Market & Credit risk</li>
+              <li>Up & Running when regulation changes</li>
+              <li>Unique analytics & intuitive</li>
+            </ul>
             <p className="pb-3">
-              Contact us for a 15 minutes demonstration 
+              Contact us for a 15 minutes demonstration
               on tablet during your coffee break.
             </p>
             <Button className="hover-up" variant="secondary" href="/cleo#contact-form">
@@ -108,7 +113,7 @@ const SstOnDemand = () => {
           <Col lg={5} xs={12} className="p-5">
             <h1 className="pb-3">SST on-demand</h1>
             <p className="pb-3">
-              Our simple &amp; convenient service allows you to get 
+              Our simple &amp; convenient service allows you to get
               your market and credit risk ready on-demand.
             </p>
             <ul className="pb-3">
@@ -148,7 +153,7 @@ const Partners = () => (
             <img id="volada" className="partner-logo" src="/images/partners/volada-white.svg"></img>
           </a>
         </Col>
-        
+
       </Row>
     </Container>
   </section>
