@@ -14,44 +14,36 @@ const SoftwareDevelopmentHeader = () => (
 const Partnerships = () => {
   let subjects = [
     {
-      title: "Asset and Liability Management (ALM)", 
+      title: "Regulatory Technologies",
+      content: "For insurers, bankers and asset managers. SST, Solvency II, Tied Assets, Mifid II, ISDA SIMM, FRTB, Basel Regulations."
+    },
+    {
+      title: "Asset and Liability Management (ALM)",
       content: "Develop ALM strategies that are adapted to today's financial and regulatory environments."
     },
     {
-      title: "Tied Assets", 
-      content: "Manage and automate FINMA's tied assets regulation within the same framework as the SST."
+      title: "Trade Recommandation",
+      content: "Customized trade recommandation systems based on regulatory, risk and strategic requirements."
     },
     {
-      title: "Solvency II", 
-      content: "Incorporate Solvency II wihin the framwork"
-    },
-    {
-      title: "Trade Recommandation", 
-      content: "Customized trade recommandation systems based on regulatory, risk and strategic asset allocation requirements."
-    },
-    {
-      title: "Trade Execution", 
+      title: "Trade Execution",
       content: "Easily execute trades for your strategies without management fees through third party APIs."
     },
     {
-      title: "Regulatory Technologies (REGTECH)", 
-      content: "Innovative and automated solutions for specific regulations."
+      title: "Risk Models",
+      content: "Your own pragmatic risk models."
     },
     {
-      title: "Risk Models", 
-      content: "Incorporate your own risk models and develop new pragmatic multi-year risk models."
+      title: "Risk Management",
+      content: "Compute risk KPIs such as sensitivities, CVAs & exposures in real-time."
     },
     {
       title: "Client Reporting",
       content: "Improve and simplify the reporting of complex topics to increase customer satisfaction."
     },
     {
-      title: "Asset Management",
-      content: "Manage your clients regulatory requirements efficiently"
-    },
-    {
-      title: "Consulting",
-      content: "Build the next generation of tools to improve, simplfy and automate your services"
+      title: "Analytics",
+      content: "Make use of Machine Learning and AI to support decision making."
     }
   ];
 
@@ -63,13 +55,13 @@ const Partnerships = () => {
           <h5 className="mt-0">{s.title}</h5>
           {s.content}
         </Media.Body>
-      </Media>   
+      </Media>
     </Col>
   ));
 
   return (
     <section id="partnerships" className="bg-light standard-section">
-      <Container> 
+      <Container>
         <div id="partnership-title" className="text-center px-5 mb-5">
           <h1 className="pb-3 text-primary font-weight-bold">Have an idea ?</h1>
           <p>Our product development is driven by collaboration.</p>
