@@ -104,7 +104,7 @@ const Comparison = () => {
                   <img className="mr-4" src="/images/illustrations/plus-white.svg" width="24px"></img>
                   <Media.Body>
                     <h5 className="mt-0">Targeted &amp; intuitive apps and modules.</h5>
-                    <p>Teaches itself, get going now.</p>
+                    <p>Learn by yourself, get going now.</p>
                   </Media.Body>
                 </Media>
                 <Media className="mb-3">
