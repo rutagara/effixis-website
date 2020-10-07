@@ -7,11 +7,10 @@ const CleoHeader = () => (
   <Header dividerColor="white" currentPage="cleo" overflow="show">
     <Row>
       <Col lg={6} xs={12} id="catchline" className="px-5 text-light">
-        <h1 className="display-4">Welcome Cleo &trade;</h1>
-        <p>The simplest way to compute &amp; understand your SST.</p>
+        <h1 className="display-4">Welcome Cleo </h1>
+        <p>The simplest way to compute, understand &amp; manage your SST.</p>
         <span className="design-line"></span>
       </Col>
-
     </Row>
 
     <img id="cleo-big-logo" className="d-xl-block d-none" src="/images/illustrations/macbook-with-product.png"></img>
@@ -51,14 +50,18 @@ const Steps = () => (
   <section id="steps" className="bg-light standard-section">
     <Container>
       <div id="introduction-title" className="text-center px-5 mb-5">
-        <h1 className="my-3">Cleo&trade; is as easy as 1-2-3 !</h1>
+        <h1 className="my-3">Cleo is as easy as 1-2-3 !</h1>
       </div>
       <Row>
+      {
+        /*
         <Col lg={7} xs={12} className="p-5 d-flex align-items-center">
           <ResponsiveEmbed aspectRatio="16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowFullScreen></iframe>
           </ResponsiveEmbed>
         </Col>
+        */
+      }
         <Col lg={5} xs={12} className="p-5">
           <Media className="p-3">
             <img width={64} className="mr-4" src="/images/illustrations/input.svg"/>

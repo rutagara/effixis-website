@@ -50,7 +50,7 @@ const Cleo = () => (
 
           <Col lg={4} xs={12} className="p-5">
             <h4 className="pb-3"><span className="font-weight-bold">
-              Cleo &trade;</span> makes SST reporting simpler than ever
+              Cleo </span> makes SST reporting simpler than ever
             </h4>
             <ul className="pb-3">
               <li>Automated SST Market & Credit risk</li>
@@ -61,8 +61,8 @@ const Cleo = () => (
               Contact us for a 15 minutes demonstration
               on tablet during your coffee break.
             </p>
-            <Button className="hover-up" variant="secondary" href="/cleo#contact-form">
-              Book a Demo
+            <Button className="hover-up" variant="secondary" href="/cleo">
+              Learn more
             </Button>
           </Col>
 
@@ -82,8 +82,8 @@ const SoftwareDevelopment = () => (
             Do you have a software development project in mind?<br/>
             Contact us to establish an attractive partnership.
           </p>
-          <Button className="hover-up" variant="primary" href="/software-development#contact-form">
-            Contact us
+          <Button className="hover-up" variant="primary" href="/software-development">
+            Learn more
           </Button>
         </Col>
 
@@ -121,9 +121,11 @@ const SstOnDemand = () => {
               <li>Fast delivery</li>
               <li>Custom reporting</li>
             </ul>
-            <Button className="hover-up" variant="primary" href="sst-on-demand/#contact-form">
-              Contact us
-            </Button>
+            {
+              /* <Button className="hover-up" variant="primary" href="sst-on-demand/#contact-form">
+               Contact us
+             </Button> */
+            }
           </Col>
 
           <Col lg={7} id="sst-on-demand-iphone-chat" className="p-5 d-lg-block d-none">

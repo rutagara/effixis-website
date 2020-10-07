@@ -15,7 +15,7 @@ const Header = (props) => (
         <Navbar.Collapse id="main-nav">
           <Nav className="ml-auto" activeKey={"/" + props.currentPage}>
             <Nav.Link className="p-3 text-right" href="/">Home</Nav.Link>
-            <Nav.Link className="p-3 text-right" href="/cleo">Cleo&trade;</Nav.Link>
+            <Nav.Link className="p-3 text-right" href="/cleo">Cleo</Nav.Link>
             <Nav.Link className="p-3 text-right" href="/software-development">Software Development</Nav.Link>
             <Nav.Link className="p-3 text-right" href="/sst-on-demand">SST On-Demand</Nav.Link>
             <Nav.Link className="p-3 text-right" href="/about-us">About Us</Nav.Link>
@@ -41,5 +41,3 @@ Header.defaultProps = {
 }
 
 export default Header;
-
-
