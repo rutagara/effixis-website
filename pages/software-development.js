@@ -4,7 +4,7 @@ import ContactForm from '../components/contact-form'
 import { Row, Col, Container, Media } from 'react-bootstrap'
 
 const SoftwareDevelopmentHeader = () => (
-  <Header dividerColor="light" currentPage="software-development">
+  <Header dividerColor="white" currentPage="software-development">
     <div id="big-ampersand" className="text-light font-weight-bold">
       &amp;
     </div>
@@ -60,7 +60,7 @@ const Partnerships = () => {
   ));
 
   return (
-    <section id="partnerships" className="bg-light standard-section">
+    <section id="partnerships" className="bg-white standard-section">
       <Container>
         <div id="partnership-title" className="text-center px-5 mb-5">
           <h1 className="pb-3 text-primary font-weight-bold">Have an idea ?</h1>
@@ -79,7 +79,7 @@ const SoftwareDevelopment = () => (
   <StandardLayout title='Software Development'>
     <SoftwareDevelopmentHeader></SoftwareDevelopmentHeader>
     <Partnerships></Partnerships>
-    <ContactForm></ContactForm>
+    {/* <ContactForm></ContactForm> */}
   </StandardLayout>
 )
 

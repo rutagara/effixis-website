@@ -26,9 +26,9 @@ const Footer = () => (
               <Nav.Item>
                   <Nav.Link className="pl-0" href="/software-dev">Software Development</Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+{/*           <Nav.Item>
                   <Nav.Link className="pl-0" href="/sst-on-demand">SST On-Demand</Nav.Link>
-              </Nav.Item>
+              </Nav.Item> */}
               <Nav.Item>
                   <Nav.Link className="pl-0" href="/about-us">About Us</Nav.Link>
               </Nav.Item>
